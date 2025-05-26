@@ -1,0 +1,4 @@
+/* Extra Styles to be bundled into the WebComponents */
+:root, :host {
+  --un-bg-opacity: 100%;
+}

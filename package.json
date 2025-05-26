@@ -1,0 +1,73 @@
+{
+  "name": "@antfu/starter-vue-uno-webcomponents",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@10.11.0",
+  "description": "Starter for creating agnostic WebComponents using Vue and UnoCSS",
+  "author": "Anthony Fu <anthonyfu117@hotmail.com>",
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/antfu",
+  "homepage": "https://github.com/antfu/starter-vue-uno-webcomponents#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antfu/starter-vue-uno-webcomponents.git"
+  },
+  "bugs": "https://github.com/antfu/starter-vue-uno-webcomponents/issues",
+  "keywords": [],
+  "sideEffects": false,
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build:css": "tsx scripts/build-css.ts",
+    "build": "nr build:css && unbuild",
+    "dev": "unbuild --stub",
+    "lint": "eslint",
+    "play": "nr -C playground dev",
+    "prepublishOnly": "nr build",
+    "release": "bumpp && pnpm publish",
+    "start": "tsx src/index.ts",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepare": "simple-git-hooks"
+  },
+  "dependencies": {
+    "vue": "catalog:prod"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "catalog:cli",
+    "@antfu/ni": "catalog:cli",
+    "@antfu/utils": "catalog:inlined",
+    "@types/node": "catalog:types",
+    "@unocss/preset-wind4": "catalog:cli",
+    "bumpp": "catalog:cli",
+    "eslint": "catalog:cli",
+    "lightningcss": "catalog:cli",
+    "lint-staged": "catalog:cli",
+    "simple-git-hooks": "catalog:cli",
+    "tinyexec": "catalog:utils",
+    "tinyglobby": "catalog:cli",
+    "tsx": "catalog:cli",
+    "typescript": "catalog:cli",
+    "unbuild": "catalog:cli",
+    "unocss": "catalog:cli",
+    "unplugin-vue": "catalog:cli",
+    "vite": "catalog:cli",
+    "vitest": "catalog:testing",
+    "vitest-package-exports": "catalog:testing",
+    "yaml": "catalog:testing"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm i --frozen-lockfile --ignore-scripts --offline && npx lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}

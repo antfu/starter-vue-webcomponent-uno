@@ -1,0 +1,37 @@
+packages:
+  - playground
+  - docs
+  - packages/*
+  - examples/*
+catalogs:
+  cli:
+    '@antfu/eslint-config': ^4.13.2
+    '@antfu/ni': ^24.4.0
+    '@unocss/preset-wind4': ^66.1.2
+    bumpp: ^10.1.1
+    eslint: ^9.27.0
+    lightningcss: ^1.30.1
+    lint-staged: ^16.0.0
+    simple-git-hooks: ^2.13.0
+    tinyglobby: ^0.2.14
+    tsx: ^4.19.4
+    typescript: ^5.8.3
+    unbuild: ^3.5.0
+    unocss: ^66.1.2
+    unplugin-vue: ^6.2.0
+    vite: ^6.3.5
+  inlined:
+    '@antfu/utils': ^9.2.0
+  prod:
+    vue: ^3.5.14
+  testing:
+    vitest: ^3.1.4
+    vitest-package-exports: ^0.1.1
+    yaml: ^2.8.0
+  types:
+    '@types/node': ^22.15.21
+  utils:
+    tinyexec: ^1.0.1
+onlyBuiltDependencies:
+  - esbuild
+  - simple-git-hooks
