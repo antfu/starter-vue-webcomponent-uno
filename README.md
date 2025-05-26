@@ -8,6 +8,32 @@
 
 Starter for creating agnostic WebComponents using Vue and UnoCSS
 
+## Motivations
+
+Sometimes when you want to build some embed UI for websites/apps you might not have control with.
+
+For example, injected UI in web browser extensions, or dev tool UI etc. In those cases, styling can be a headache, because the CSS selectors are applying to the whole page and inferrance might occur.
+
+We have nice tools like Vue's Scoped CSS, or native Nested CSS, but they only prevent the styles from leaking out, but can't prevent users styles from sneaking in. Some workarounds like rasing the specificity by using more selectors, or applying `!important` to every rules. However, those workarounds make it a lot harder to work with but still no guarantee to always work.
+
+Shadow DOM is the only solution for the true style isolation, while the bare API is not very friendly work with.
+
+We as developers, surely we want to use the stack that works the best to us. In my case, it's Vue for logic and UnoCSS for style. Unlike plain JavaScript you can directly bundle into a library, using Vue SFC and UnoCSS to build an agnostic library can be a bit tricky to set up.
+
+That's why I created this starter, to help you quickly build an agnostic library using the tools with the best developer experience.
+
+## Target Scenarios
+
+- Embed/Injected UI
+- A single or a few root components
+- Could be shipped as a module entry or a library
+
+### Non-targets
+
+- Full-page UI
+- SSR
+- UI libraries
+
 ## Sponsors
 
 <p align="center">
