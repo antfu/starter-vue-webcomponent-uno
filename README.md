@@ -1,4 +1,4 @@
-# starter-vue-uno-webcomponents
+# starter-vue-webcomponent-uno
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
@@ -34,6 +34,13 @@ That's why I created this starter, to help you quickly build an agnostic library
 - SSR
 - UI libraries
 
+## How it works
+
+- Custom script [`scripts/build-css.ts`](./scripts/build-css.ts) to generate the CSS tokens with UnoCSS.
+- [`unplugin-vue`](https://github.com/unplugin/unplugin-vue) to bundle the Vue components into JavaScript.
+- [`tsdown`](https://github.com/unjs/tsdown) to build the library (can be any build tool that supported by unplugin).
+- Use [`defineCustomElement`](https://vuejs.org/api/custom-elements.html#definecustomelement) to define the WebComponents.
+
 ## Sponsors
 
 <p align="center">
@@ -48,13 +55,13 @@ That's why I created this starter, to help you quickly build an agnostic library
 
 <!-- Badges -->
 
-[npm-version-src]: https://img.shields.io/npm/v/starter-vue-uno-webcomponents?style=flat&colorA=080f12&colorB=1fa669
-[npm-version-href]: https://npmjs.com/package/starter-vue-uno-webcomponents
-[npm-downloads-src]: https://img.shields.io/npm/dm/starter-vue-uno-webcomponents?style=flat&colorA=080f12&colorB=1fa669
-[npm-downloads-href]: https://npmjs.com/package/starter-vue-uno-webcomponents
-[bundle-src]: https://img.shields.io/bundlephobia/minzip/starter-vue-uno-webcomponents?style=flat&colorA=080f12&colorB=1fa669&label=minzip
-[bundle-href]: https://bundlephobia.com/result?p=starter-vue-uno-webcomponents
-[license-src]: https://img.shields.io/github/license/antfu/starter-vue-uno-webcomponents.svg?style=flat&colorA=080f12&colorB=1fa669
-[license-href]: https://github.com/antfu/starter-vue-uno-webcomponents/blob/main/LICENSE
+[npm-version-src]: https://img.shields.io/npm/v/starter-vue-webcomponent-uno?style=flat&colorA=080f12&colorB=1fa669
+[npm-version-href]: https://npmjs.com/package/starter-vue-webcomponent-uno
+[npm-downloads-src]: https://img.shields.io/npm/dm/starter-vue-webcomponent-uno?style=flat&colorA=080f12&colorB=1fa669
+[npm-downloads-href]: https://npmjs.com/package/starter-vue-webcomponent-uno
+[bundle-src]: https://img.shields.io/bundlephobia/minzip/starter-vue-webcomponent-uno?style=flat&colorA=080f12&colorB=1fa669&label=minzip
+[bundle-href]: https://bundlephobia.com/result?p=starter-vue-webcomponent-uno
+[license-src]: https://img.shields.io/github/license/antfu/starter-vue-webcomponent-uno.svg?style=flat&colorA=080f12&colorB=1fa669
+[license-href]: https://github.com/antfu/starter-vue-webcomponent-uno/blob/main/LICENSE
 [jsdocs-src]: https://img.shields.io/badge/jsdocs-reference-080f12?style=flat&colorA=080f12&colorB=1fa669
-[jsdocs-href]: https://www.jsdocs.io/package/starter-vue-uno-webcomponents
+[jsdocs-href]: https://www.jsdocs.io/package/starter-vue-webcomponent-uno

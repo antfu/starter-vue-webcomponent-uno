@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "typescript": "catalog:cli",
-    "vite": "catalog:cli"
+    "typescript": "catalog:dev",
+    "vite": "catalog:dev"
   }
 }

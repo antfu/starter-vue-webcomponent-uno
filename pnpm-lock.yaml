@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 catalogs:
-  cli:
+  dev:
     '@antfu/eslint-config':
       specifier: ^4.13.2
       version: 4.13.2
@@ -21,6 +21,9 @@ catalogs:
     bumpp:
       specifier: ^10.1.1
       version: 10.1.1
+    chokidar:
+      specifier: ^4.0.3
+      version: 4.0.3
     eslint:
       specifier: ^9.27.0
       version: 9.27.0
@@ -90,10 +93,10 @@ importers:
         version: 3.5.14(typescript@5.8.3)
     devDependencies:
       '@antfu/eslint-config':
-        specifier: catalog:cli
+        specifier: catalog:dev
         version: 4.13.2(@vue/compiler-sfc@3.5.14)(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)(vitest@3.1.4(@types/debug@4.1.12)(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.19.4)(yaml@2.8.0))
       '@antfu/ni':
-        specifier: catalog:cli
+        specifier: catalog:dev
         version: 24.4.0
       '@antfu/utils':
         specifier: catalog:inlined
@@ -102,49 +105,52 @@ importers:
         specifier: catalog:types
         version: 22.15.21
       '@unocss/preset-wind4':
-        specifier: catalog:cli
+        specifier: catalog:dev
         version: 66.1.2
       ansis:
-        specifier: catalog:cli
+        specifier: catalog:dev
         version: 4.1.0
       bumpp:
-        specifier: catalog:cli
+        specifier: catalog:dev
         version: 10.1.1
+      chokidar:
+        specifier: catalog:dev
+        version: 4.0.3
       eslint:
-        specifier: catalog:cli
+        specifier: catalog:dev
         version: 9.27.0(jiti@2.4.2)
       lightningcss:
-        specifier: catalog:cli
+        specifier: catalog:dev
         version: 1.30.1
       lint-staged:
-        specifier: catalog:cli
+        specifier: catalog:dev
         version: 16.0.0
       simple-git-hooks:
-        specifier: catalog:cli
+        specifier: catalog:dev
         version: 2.13.0
       tinyexec:
         specifier: catalog:utils
         version: 1.0.1
       tinyglobby:
-        specifier: catalog:cli
+        specifier: catalog:dev
         version: 0.2.14
       tsdown:
-        specifier: catalog:cli
+        specifier: catalog:dev
         version: 0.12.4(typescript@5.8.3)
       tsx:
-        specifier: catalog:cli
+        specifier: catalog:dev
         version: 4.19.4
       typescript:
-        specifier: catalog:cli
+        specifier: catalog:dev
         version: 5.8.3
       unocss:
-        specifier: catalog:cli
+        specifier: catalog:dev
         version: 66.1.2(postcss@8.5.3)(vite@6.3.5(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.19.4)(yaml@2.8.0))(vue@3.5.14(typescript@5.8.3))
       unplugin-vue:
-        specifier: catalog:cli
+        specifier: catalog:dev
         version: 6.2.0(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.19.4)(vue@3.5.14(typescript@5.8.3))(yaml@2.8.0)
       vite:
-        specifier: catalog:cli
+        specifier: catalog:dev
         version: 6.3.5(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.19.4)(yaml@2.8.0)
       vitest:
         specifier: catalog:testing
@@ -159,10 +165,10 @@ importers:
   playground:
     devDependencies:
       typescript:
-        specifier: catalog:cli
+        specifier: catalog:dev
         version: 5.8.3
       vite:
-        specifier: catalog:cli
+        specifier: catalog:dev
         version: 6.3.5(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.30.1)(tsx@4.19.4)(yaml@2.8.0)
 
 packages:

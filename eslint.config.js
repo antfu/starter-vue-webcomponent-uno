@@ -5,5 +5,8 @@ export default antfu(
   {
     type: 'lib',
     pnpm: true,
+    ignores: [
+      'src/.generated/css.ts',
+    ],
   },
 )
