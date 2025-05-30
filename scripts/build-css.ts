@@ -2,6 +2,7 @@ import { Buffer } from 'node:buffer'
 import fs from 'node:fs/promises'
 import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import c from 'ansis'
 import { transform } from 'lightningcss'
 import { glob } from 'tinyglobby'
 import { createGenerator } from 'unocss'
@@ -38,9 +39,10 @@ export async function buildCSS() {
       minify: true,
     })
     await fs.writeFile(join(srcDir, '.generated/css.ts'), `export default ${JSON.stringify(String(css))}`)
+    console.log(`${c.green('✓')} CSS built`)
   }
   catch (e: any) {
-    console.error('Failed to build css', e)
+    console.error(`${c.red('!')} Failed to build css`, e)
     if (e.loc) {
       console.error('Error at line', e.loc.line, 'column', e.loc.column)
       console.error(input.split('\n')[e.loc.line - 1])
@@ -49,4 +51,4 @@ export async function buildCSS() {
   }
 }
 
-buildCSS()
+await buildCSS()
