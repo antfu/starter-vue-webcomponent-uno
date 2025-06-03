@@ -12,9 +12,9 @@ catalogs:
     '@antfu/ni':
       specifier: ^24.4.0
       version: 24.4.0
-    '@unocss/preset-wind4':
-      specifier: ^66.1.2
-      version: 66.1.2
+    '@unocss/reset':
+      specifier: ^66.1.3
+      version: 66.1.3
     ansis:
       specifier: ^4.1.0
       version: 4.1.0
@@ -27,6 +27,9 @@ catalogs:
     eslint:
       specifier: ^9.27.0
       version: 9.27.0
+    exsolve:
+      specifier: ^1.0.5
+      version: 1.0.5
     lightningcss:
       specifier: ^1.30.1
       version: 1.30.1
@@ -104,9 +107,9 @@ importers:
       '@types/node':
         specifier: catalog:types
         version: 22.15.21
-      '@unocss/preset-wind4':
+      '@unocss/reset':
         specifier: catalog:dev
-        version: 66.1.2
+        version: 66.1.3
       ansis:
         specifier: catalog:dev
         version: 4.1.0
@@ -119,6 +122,9 @@ importers:
       eslint:
         specifier: catalog:dev
         version: 9.27.0(jiti@2.4.2)
+      exsolve:
+        specifier: catalog:dev
+        version: 1.0.5
       lightningcss:
         specifier: catalog:dev
         version: 1.30.1
@@ -879,6 +885,9 @@ packages:
 
   '@unocss/reset@66.1.2':
     resolution: {integrity: sha512-njNy/QCpuPKBFeEvhYGwwCe3t8R8JTxONsyUB9NsFOamkF13DSlEB4Yy/QLQfIinbbmx0F/wiej/JGOJk1ecDg==}
+
+  '@unocss/reset@66.1.3':
+    resolution: {integrity: sha512-tc8uSka0R0zlfJfOjoLUg0NMT4RQnAe6nyelBXE86qYQaNV2YD7tf2iEWMmbjNwmiIjc8MigHAvYt1HmdirNww==}
 
   '@unocss/rule-utils@66.1.2':
     resolution: {integrity: sha512-nn0ehvDh7yyWq2mcBDLVpmMAivjRATUroZ8ETinyN1rmfsGesm71R0d1gV3K+Z6YC7a3+dMLc+/qzI7VK3AG/Q==}
@@ -3366,6 +3375,8 @@ snapshots:
       '@unocss/preset-wind3': 66.1.2
 
   '@unocss/reset@66.1.2': {}
+
+  '@unocss/reset@66.1.3': {}
 
   '@unocss/rule-utils@66.1.2':
     dependencies:

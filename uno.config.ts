@@ -1,7 +1,7 @@
 import {
   defineConfig,
   presetIcons,
-  presetWind4,
+  presetWind3,
 } from 'unocss'
 
 export default defineConfig({
@@ -15,9 +15,9 @@ export default defineConfig({
     },
   ],
   presets: [
-    presetWind4({
+    // Currently we need to use Wind3, as Shadow DOM does not support @property declarations
+    presetWind3({
       dark: 'media',
-      reset: true,
     }),
     presetIcons({
       warn: true,
