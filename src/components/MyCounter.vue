@@ -1,21 +1,24 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-
 const props = defineProps<{
-  modelValue?: number
+  deltas: {
+    increment: number
+    decrement: number
+  }
 }>()
 
 const emit = defineEmits(['update:modelValue'])
 
-const count = ref(props.modelValue ?? 0)
+const count = defineModel<number>('count', {
+  default: 0,
+})
 
 function increment() {
-  count.value++
+  count.value += props.deltas.increment
   emit('update:modelValue', count.value)
 }
 
 function decrement() {
-  count.value--
+  count.value += props.deltas.decrement
   emit('update:modelValue', count.value)
 }
 
@@ -33,10 +36,10 @@ function reset() {
     </div>
     <div class="flex gap-2">
       <button class="px-4 py-2 bg-amber-500 text-white rounded hover:bg-amber-600" @click="increment">
-        Increment
+        Increment +{{ deltas.increment }}
       </button>
       <button class="px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600" @click="decrement">
-        Decrement
+        Decrement {{ deltas.decrement }}
       </button>
       <button class="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600" @click="reset">
         Reset
