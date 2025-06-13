@@ -13,9 +13,8 @@ export default defineConfig({
       let { watch, ignoreWatch = [] } = options
       if (!watch)
         return
-      typeof ignoreWatch === 'string' && (options.ignoreWatch = [ignoreWatch])
-      Array.isArray(ignoreWatch) && ignoreWatch.push(GENERATED_CSS)
-      ignoreWatch = Array.from(new Set(ignoreWatch))
+      typeof ignoreWatch === 'string' && (ignoreWatch = [ignoreWatch])
+      Array.isArray(ignoreWatch) && !ignoreWatch.includes(GENERATED_CSS) && ignoreWatch.push(GENERATED_CSS)
     },
   },
   plugins: [
