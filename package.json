@@ -48,7 +48,6 @@
     "@unocss/reset": "catalog:dev",
     "ansis": "catalog:dev",
     "bumpp": "catalog:dev",
-    "chokidar": "catalog:dev",
     "eslint": "catalog:dev",
     "exsolve": "catalog:dev",
     "lightningcss": "catalog:dev",
