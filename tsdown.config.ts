@@ -1,6 +1,6 @@
 import { defineConfig } from 'tsdown'
 import Vue from 'unplugin-vue/rolldown'
-import { buildCSS,GENERATED_CSS } from './scripts/build-css'
+import { buildCSS, GENERATED_CSS } from './scripts/build-css'
 
 export default defineConfig({
   entry: [
@@ -8,13 +8,14 @@ export default defineConfig({
   ],
   fixedExtension: true,
   hooks: {
-    "build:prepare": async ({ options }) => {
-      await buildCSS();
-      let { watch, ignoreWatch = [] } = options;
-      if (!watch) return;
-      typeof ignoreWatch === "string" && (options.ignoreWatch = [ignoreWatch]);
-      Array.isArray(ignoreWatch) && ignoreWatch.push(GENERATED_CSS);
-      ignoreWatch = Array.from(new Set(ignoreWatch));
+    'build:prepare': async ({ options }) => {
+      await buildCSS()
+      let { watch, ignoreWatch = [] } = options
+      if (!watch)
+        return
+      typeof ignoreWatch === 'string' && (options.ignoreWatch = [ignoreWatch])
+      Array.isArray(ignoreWatch) && ignoreWatch.push(GENERATED_CSS)
+      ignoreWatch = Array.from(new Set(ignoreWatch))
     },
   },
   plugins: [
