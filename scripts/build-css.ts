@@ -3,7 +3,6 @@ import fs from 'node:fs/promises'
 import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import c from 'ansis'
-import chokidar from 'chokidar'
 import { resolveModulePath } from 'exsolve'
 import { transform } from 'lightningcss'
 import { glob } from 'tinyglobby'
@@ -13,7 +12,7 @@ import config from '../uno.config'
 const SRC_DIR = fileURLToPath(new URL('../src', import.meta.url))
 const GLOBS = ['components/**/*.vue']
 const USER_STYLE = join(SRC_DIR, 'style.css')
-const GENERATED_CSS = join(SRC_DIR, '.generated/css.ts')
+export const GENERATED_CSS = join(SRC_DIR, '.generated/css.ts')
 const MINIFY = true
 
 export async function buildCSS() {
@@ -71,14 +70,3 @@ export async function buildCSS() {
   }
 }
 
-export async function watchCSS() {
-  const watcher = chokidar.watch(GLOBS, {
-    cwd: SRC_DIR,
-  })
-
-  watcher.on('change', async () => {
-    await buildCSS()
-  })
-
-  return watcher
-}
