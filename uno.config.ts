@@ -2,6 +2,7 @@ import {
   defineConfig,
   presetIcons,
   presetWind3,
+  transformerDirectives,
 } from 'unocss'
 
 export default defineConfig({
@@ -22,5 +23,9 @@ export default defineConfig({
     presetIcons({
       warn: true,
     }),
+  ],
+  transformers: [
+    // This enable using of `--uno` and `--at-apply` directives in custom CSS.
+    transformerDirectives(),
   ],
 })
